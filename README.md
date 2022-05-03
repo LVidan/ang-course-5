@@ -1,27 +1,27 @@
-# AngularDomaci5
+1. Napraviti 2 komponente: Change font size i Product
+2. Change Font Size:
+	- 2 buttona Increase i Decrease font size, povećavaju tj smanjuju određeni property iz typescript-a. Vrednost tog propertyja se prikazuje ispod button-a
+	- U p tagu ("Neki tekst") pozvati direktivu "clicking", koja prihvata 2 argumenta clicking i fontSize
+	- Ukoliko je za clicking prosleđeno true, klikom na tekst se fontSize elementa setuje u skladu sa podatkom koji se nalazi u komponenti
+	- Ukoliko je za clicking svojstvo prosleđeno false, klikom na tekst se ne dešava ništa
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+3. Products:
+	- Prikazati dati niz u formi tabele koristeći ngFor
+	products = [
+      		{ "Name": "Cheese", "Price" : 2.50, "Location": "Refrigerated foods", "Type": "C"},
+      		{ "Name": "Crisps", "Price" : 3, "Location": "the Snack isle", "Type": "M"},
+      		{ "Name": "Pizza", "Price" : 4, "Location": "Refrigerated foods", "Type": "?"},
+      		{ "Name": "Chocolate", "Price" : 1.50, "Location": "the Snack isle", "Type": "C"},
+      		{ "Name": "Caviar", "Price" : 45.50, "Location": "Refrigerated foods", "Type": "E"},
+      		{ "Name": "Self-raising flour", "Price" : 1.50, "Location": "Home baking", "Type": "C"},
+      		{ "Name": "Ground almonds", "Price" : 3, "Location": "Home baking", "Type": "M"}
+    	]
+	- Koristeći index u svakoj iteraciji, promeniti pozadinsku boju parnim elementima
+	- Koristeći ngSwitch za svojstvo Type (kolona Price Desc):
+		- Ukoliko je vrednost C prikazati Cheap
+		- Ukoliko je vrednost M prikazati Medium
+		- Ukoliko je vrednost E prikazati Expensive
+		- U ostalim situacijama prikazati Other
 
-## Development server
+https://user-images.githubusercontent.com/38792171/166428356-423bade1-2d63-4a22-ba65-1ab1a929ffd3.mp4
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

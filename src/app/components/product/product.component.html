@@ -1,1 +1,25 @@
-<p>product works!</p>
+<div class="container">
+  <hr>
+  <h3>Products component</h3>
+  <table border="1px solid" width="100%">
+    <tr>
+      <ng-container *ngFor="let productHeading of tableHeadings">
+        <th>{{ productHeading }}</th>
+      </ng-container>
+    </tr>
+    <ng-container *ngFor="let product of products; let i = index">
+      <tr [ngClass]="{'even': (i + 1) % 2 == 0}">
+        <td>{{ i + 1 }}</td>
+        <td>{{  product.Name }}</td>
+        <td>{{ product.Price }}</td>
+        <td>{{ product.Location }}</td>
+        <ng-container [ngSwitch]="product.Type">
+          <td *ngSwitchCase="'C'">Cheap</td>
+          <td *ngSwitchCase="'M'">Medium</td>
+          <td *ngSwitchCase="'E'">Expensive</td>
+          <td *ngSwitchDefault="'?'">Other</td>
+        </ng-container>
+      </tr>
+    </ng-container>
+  </table>
+</div>

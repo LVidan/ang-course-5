@@ -1,0 +1,10 @@
+<div class="container">
+  <h3>Change Font Size Component</h3>
+  <button class="btn btn--increase" (click)="btnIncrease()">{{ 'Increase font size' }}</button>
+  <button class="btn btn--decrease" (click)="btnDecrease()" [disabled]="currentFontSize == 14">{{ 'Decrease font size' }}</button>
+  <hr>
+
+  <p>Current font size: <span>{{ currentFontSize }}</span>px</p>
+
+  <h5 [appChangeFont]="directiveEnable" [fontSize]="currentFontSize">Click the text and check the changes!</h5>
+</div>

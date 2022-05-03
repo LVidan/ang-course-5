@@ -1,0 +1,9 @@
+.btn {
+  padding: 5px 15px;
+  margin-right: 15px;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
